@@ -1,4 +1,5 @@
-# csi
+# CSI Landing Page
+A landing page designed for a competition conducted by RIT-CSI student chapter
 
 ## Project setup
 ```

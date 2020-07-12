@@ -2,7 +2,7 @@
   <div class="home">
     <v-app class="custom-background">
       <v-app-bar app class="custom-gradient">
-        <div class="d-flex align-center justify-center">
+        <div class="d-flex align-center justify-center custom-center">
           <v-img
             alt="CSI Logo"
             src="../assets/csi.png"
@@ -14,16 +14,14 @@
           <v-divider vertical class="mx-4" dark />
           <v-img
             alt="RIT logo"
-            src="../assets/ramaiah.png"
+            src="../assets/ramaiah-white.png"
             transition="scale-transition"
             contain
             width="140"
             class="shrink"
           />
         </div>
-
-        <v-spacer></v-spacer>
-
+        <v-spacer class="d-none d-sm-flex"></v-spacer>
         <v-btn target="_blank" class="d-none d-sm-flex white--text" color="#E34E4B">
           <span class="mr-2">Register Now</span>
           <v-icon>mdi-open-in-new</v-icon>
@@ -73,33 +71,38 @@
             </v-layout>
           </v-flex>
           <v-flex xs12 md6 class="my-3 d-none d-sm-flex">
-            <v-layout column justify-center align-center>
+            <v-layout column align-center>
               <img src="../assets/desk.svg" alt="illustration" class="illustration" />
               <div class="my-3">
                 <div class="time-container">
-                  <span class="display-3 font-weight-bold custom-color-primary">{</span>
+                  <span class="display-4 font-weight-bold custom-color-primary mx-3">{</span>
                   <span class="time">
-                    <div v-bind:id="days"></div>
-                    <div>Days</div>
+                    <div class="display-1 font-weight-light">{{days}}</div>
+                    <h2 class="font-weight-normal ma-0">Days</h2>
                   </span>
-                  <span class="font-weight-bold ma-2">:</span>
+                  <span class="font-weight-normal mx-4 display-2 custom-color-primary">:</span>
                   <span class="time">
-                    <div v-bind:id="hours"></div>
-                    <div>Hours</div>
+                    <div class="display-1 font-weight-light">{{hours}}</div>
+                    <h2 class="font-weight-normal ma-0">Hours</h2>
                   </span>
-                  <span class="font-weight-bold ma-2">:</span>
+                  <span class="font-weight-normal mx-4 display-2 custom-color-primary">:</span>
                   <span class="time">
-                    <div v-bind:id="minutes"></div>
-                    <div>Minutes</div>
+                    <div class="display-1 font-weight-light">{{minutes}}</div>
+                    <h2 class="font-weight-normal ma-0">Mins</h2>
                   </span>
-                  <span class="display-3 font-weight-bold custom-color-primary">}</span>
+                  <span class="font-weight-normal mx-4 display-2 custom-color-primary">:</span>
+                  <span class="time">
+                    <div class="display-1 font-weight-light">{{seconds}}</div>
+                    <h2 class="font-weight-normal ma-0">Secs</h2>
+                  </span>
+                  <span class="display-4 font-weight-bold custom-color-primary mx-3">}</span>
                 </div>
               </div>
             </v-layout>
           </v-flex>
         </v-layout>
         <v-divider class="mb-3"></v-divider>
-        <v-layout row wrap class="mx-1" justify-center align-content-center>
+        <v-layout row wrap class="mx-1" justify-center align-center>
           <v-flex xs12 md12 class="my-3">
             <div class="trophy">
               <img src="../assets/trophy.svg" alt="trophy" />
@@ -141,91 +144,93 @@
           </v-flex>
         </v-layout>
         <v-divider class="my-3"></v-divider>
-        <v-layout row wrap class="mx-1" justify-center align-content-center>
+        <v-layout row wrap class="mx-1" justify-center align-center>
           <v-flex xs12 md12 class="my-3">
             <div class="trophy">
               <img src="../assets/questions.svg" alt="information" />
-              <h1 style="text-align:center;">Any Queries ? Contact Us</h1>
+              <h1 class="font-weight-light">
+                <b class="font-weight-bold">Any Queries ?</b> Contact Us
+              </h1>
             </div>
           </v-flex>
-          <v-flex xs12 md3 class="my-3">
-            <v-card class="ma-5" max-width="300" hover style="text-align:center;">
+          <v-flex xs12 sm6 md3 class="my-1">
+            <v-card class="ma-5 custom-card-secondary" max-width="300" hover>
               <v-card-text>
-                <h2 class="text--primary">Dr. S Ajitha</h2>
+                <h2 class="font-weight-normal custom-color-primary">Dr. S Ajitha</h2>
                 <p class="ma-0 mt-2">Dept. of MCA</p>
                 <div class="text--primary">CSI Student Branch Coordinator</div>
               </v-card-text>
-              <v-divider class="my-1" />
-              <div class="custom-flex">
+              <v-divider class="mt-1" />
+              <div class="custom-flex custom-card-primary">
                 <img
-                  src="../assets/call.svg"
+                  src="../assets/phone.svg"
                   alt="call-us"
                   style="width: 23px;height: 23px;margin: 0.5rem 1rem;"
                 />
-                <div>7760002530</div>
+                <div class="white--text">7760002530</div>
               </div>
             </v-card>
           </v-flex>
-          <v-flex xs12 md3 class="my-3">
-            <v-card class="ma-5" max-width="300" hover style="text-align:center;">
+          <v-flex xs12 sm6 md3 class="my-1">
+            <v-card class="ma-5 custom-card-secondary" max-width="300" hover>
               <v-card-text>
-                <h2 class="text--primary">Dr. Monica R Mundada</h2>
+                <h2 class="font-weight-normal custom-color-primary">Dr. Monica R Mundada</h2>
                 <p class="ma-0 mt-2">Dept. of CSE</p>
                 <div class="text--primary">Faculty Coordinator</div>
               </v-card-text>
-              <v-divider class="my-1" />
-              <div class="custom-flex">
+              <v-divider class="mt-1" />
+              <div class="custom-flex custom-card-primary">
                 <img
-                  src="../assets/call.svg"
+                  src="../assets/phone.svg"
                   alt="call-us"
                   style="width: 23px;height: 23px;margin: 0.5rem 1rem;"
                 />
-                <div>9980315974</div>
+                <div class="white--text">9980315974</div>
               </div>
             </v-card>
           </v-flex>
-          <v-flex xs12 md3 class="my-3">
-            <v-card class="ma-5" max-width="300" hover style="text-align:center;">
+          <v-flex xs12 sm6 md3 class="my-1">
+            <v-card class="ma-5 custom-card-secondary" max-width="300" hover>
               <v-card-text>
-                <h2 class="text--primary">Dr. Megha Arkeri</h2>
+                <h2 class="font-weight-normal custom-color-primary">Dr. Megha Arkeri</h2>
                 <p class="ma-0 mt-2">Dept. of ISE</p>
                 <div class="text--primary">Faculty Coordinator</div>
               </v-card-text>
-              <v-divider class="my-1" />
-              <div class="custom-flex">
+              <v-divider class="mt-1" />
+              <div class="custom-flex custom-card-primary">
                 <img
-                  src="../assets/call.svg"
+                  src="../assets/phone.svg"
                   alt="call-us"
                   style="width: 23px;height: 23px;margin: 0.5rem 1rem;"
                 />
-                <div>9008977922</div>
+                <div class="white--text">9008977922</div>
               </div>
             </v-card>
           </v-flex>
-          <v-flex xs12 md3 class="my-3">
-            <v-card class="ma-5" max-width="300" hover style="text-align:center;">
+          <v-flex xs12 sm6 md3 class="my-1">
+            <v-card class="ma-5 custom-card-secondary" max-width="300" hover>
               <v-card-text>
-                <h2 class="text--primary">Ananya Pramod</h2>
+                <h2 class="font-weight-normal custom-color-primary">Ananya Pramod</h2>
                 <p class="ma-0 mt-2">Student of CSE</p>
                 <div class="text--primary">Student Coordinator</div>
               </v-card-text>
-              <v-divider class="my-1" />
-              <div class="custom-flex">
+              <v-divider class="mt-1" />
+              <div class="custom-flex custom-card-primary">
                 <img
-                  src="../assets/call.svg"
+                  src="../assets/phone.svg"
                   alt="call-us"
                   style="width: 23px;height: 23px;margin: 0.5rem 1rem;"
                 />
-                <div>7760002530</div>
+                <div class="white--text">7760002530</div>
               </div>
             </v-card>
           </v-flex>
         </v-layout>
       </v-container>
       <p
-        class="custom-gradient mb-0 py-2"
+        class="custom-gradient mb-0 pa-2"
         style="text-align:center;color:gray"
-      >Ramaiah Institute of Technology, Autonomous institute, Affilliated to VTU, Approved by AICTE, New Delhi & Govt. of Karnataka, MSR Nagar, MSRIT Post, Bangalore - 560054, Karnataka</p>
+      >Ramaiah Institute of Technology, Autonomous institute, Affilliated to VTU, Approved by AICTE - New Delhi & Govt. of Karnataka, MSR Nagar, MSRIT Post, Bangalore - 560054, Karnataka</p>
     </v-app>
   </div>
 </template>
@@ -236,14 +241,52 @@ export default {
     return {
       days: 0,
       hours: 0,
-      minutes: 0
+      minutes: 0,
+      seconds: 0
     };
+  },
+  methods: {
+    result() {
+      let end = new Date("2020-07-18");
+      let start = new Date();
+      let remTime = end.getTime() - start.getTime();
+      let mm = Math.floor(remTime / (1000 * 60));
+      let hh = Math.floor(mm / 60);
+      let dd = Math.floor(hh / 24);
+      let ss = Math.floor(remTime / 1000);
+      hh %= 24;
+      mm %= 60;
+      ss %= 60;
+      hh = hh < 0 ? "0" : hh < 10 ? "0" + hh : hh;
+      mm = mm < 0 ? "0" : mm < 10 ? "0" + mm : mm;
+      ss = ss < 0 ? "0" : ss < 10 ? "0" + ss : ss;
+      this.days = dd;
+      this.hours = hh;
+      this.minutes = mm;
+      this.seconds = ss;
+      if (start >= end) {
+        this.days = 0;
+        this.hours = 0;
+        this.minutes = 0;
+        this.seconds = 0;
+      }
+      setTimeout(this.result, 1000);
+    }
+  },
+  mounted() {
+    this.result();
   }
 };
 </script>
 
 
 <style lang="scss" scoped>
+.custom-center{
+  @media (max-width: 414px){
+    display: block;
+    margin: 0 auto;
+  }
+}
 .trophy {
   width: 100%;
   height: 100%;
@@ -251,6 +294,7 @@ export default {
   flex-direction: column;
   justify-content: center;
   align-items: center;
+  text-align: center;
   img {
     width: 80px;
     height: 80px;
@@ -274,8 +318,15 @@ export default {
 .custom-color-primary {
   color: #e34e4b;
 }
+.custom-card-primary {
+  background: #e34e4b;
+}
 .custom-color-secondary {
   color: #374957;
+}
+.custom-card-secondary {
+  text-align: center;
+  background: #f9f5f3;
 }
 .custom-flex,
 .custom-flex-prizes {
@@ -298,6 +349,10 @@ export default {
 .illustration {
   width: 515px;
   height: 350px;
+  @media (max-width: 1024px) {
+    width: 420px;
+    height: 350px;
+  }
   @media (max-width: 414px) {
     width: 215px;
     height: 250px;
@@ -547,8 +602,4 @@ export default {
 }
 </style>
 
-<script>
-export default {
-  name: "Home"
-};
-</script>
+
